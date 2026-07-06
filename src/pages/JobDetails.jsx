@@ -13,7 +13,7 @@ const JobDetails = () => {
   const handleApply = () => {
     saveAppliedJob(id);
     setApplied(true);
-    navigate("/saved");
+    navigate("/applied");
   };
 
   if (!job) {

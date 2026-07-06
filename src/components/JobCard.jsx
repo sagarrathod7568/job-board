@@ -1,7 +1,17 @@
 import { Link } from "react-router-dom";
 import { FaBookmark, FaMapMarkerAlt, FaBriefcase } from "react-icons/fa";
+import { useState } from "react";
+import { isJobSaved, toggleSavedJob } from "../services/savedJobsService";
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job, onSavedChange }) => {
+  const [saved, setSaved] = useState(() => isJobSaved(job.id));
+
+  const handleToggleSaved = () => {
+    const nextSaved = toggleSavedJob(job.id);
+    setSaved(nextSaved);
+    onSavedChange?.();
+  };
+
   return (
     <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-6 border border-gray-100 dark:bg-slate-800 dark:border-slate-700 dark:shadow-slate-950/30">
 
@@ -27,7 +37,16 @@ const JobCard = ({ job }) => {
 
         </div>
 
-        <button className="text-gray-400 hover:text-blue-600 dark:text-slate-500 dark:hover:text-blue-400">
+        <button
+          type="button"
+          onClick={handleToggleSaved}
+          className={`hover:text-blue-600 dark:hover:text-blue-400 ${
+            saved
+              ? "text-blue-600 dark:text-blue-400"
+              : "text-gray-400 dark:text-slate-500"
+          }`}
+          aria-label={saved ? "Unsave job" : "Save job"}
+        >
           <FaBookmark />
         </button>
 

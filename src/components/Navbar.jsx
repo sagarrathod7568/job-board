@@ -31,12 +31,17 @@ const Navbar = () => {
         : "text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400"
     }`;
 
+  const goToHome = () => {
+    setMobileOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-white/80 border-b border-slate-200 dark:bg-slate-950/80 dark:border-slate-800">
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6">
 
         {/* Logo */}
-        <NavLink to="/" className="flex items-center gap-2">
+        <NavLink to="/" onClick={goToHome} className="flex items-center gap-2">
           <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-bold text-lg">
             T
           </div>
@@ -56,7 +61,7 @@ const Navbar = () => {
 
         <nav className="hidden md:flex items-center gap-8">
 
-          <NavLink to="/" end className={navLinkClass}>
+          <NavLink to="/" end onClick={goToHome} className={navLinkClass}>
             Home
           </NavLink>
 
@@ -66,6 +71,10 @@ const Navbar = () => {
 
           <NavLink to="/saved" className={navLinkClass}>
             Saved Jobs
+          </NavLink>
+
+          <NavLink to="/applied" className={navLinkClass}>
+            Applied Jobs
           </NavLink>
 
         </nav>
@@ -120,7 +129,7 @@ const Navbar = () => {
             {darkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
           </button>
 
-            <NavLink to="/" onClick={()=>setMobileOpen(false)}>
+            <NavLink to="/" onClick={goToHome}>
               Home
             </NavLink>
 
@@ -130,6 +139,10 @@ const Navbar = () => {
 
             <NavLink to="/saved" onClick={()=>setMobileOpen(false)}>
               Saved Jobs
+            </NavLink>
+
+            <NavLink to="/applied" onClick={()=>setMobileOpen(false)}>
+              Applied Jobs
             </NavLink>
 
             <button className="bg-blue-600 text-white rounded-lg py-3">
