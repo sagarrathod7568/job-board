@@ -179,7 +179,7 @@ const PostJob = () => {
 
         <button
           type="submit"
-          className="mt-8 w-full rounded-xl bg-blue-600 py-2 text-lg font-semibold text-white transition hover:bg-blue-700 md:w-auto md:px-8"
+          className="mt-4 w-full rounded-xl bg-blue-600 py-2 text-lg font-semibold text-white transition hover:bg-blue-700 md:w-auto md:px-8"
         >
           Publish Job
         </button>
