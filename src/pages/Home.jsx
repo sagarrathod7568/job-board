@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import Hero from "../components/Hero";
-import jobs from "../data/jobs";
 import JobCard from "../components/JobCard";
+import { getJobs } from "../services/jobService";
 
 const Home = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const jobs = useMemo(() => getJobs(), []);
   const resultsRef = useRef(null);
   const { pathname } = useLocation();
 
@@ -40,7 +41,7 @@ const Home = () => {
 
       return searchableText.includes(query);
     });
-  }, [searchTerm]);
+  }, [jobs, searchTerm]);
 
   useEffect(() => {
     if (pathname === "/jobs") {

@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import JobDetails from "./pages/JobDetails";
 import SavedJobs from "./pages/SavedJobs";
 import AppliedJobs from "./pages/AppliedJobs";
+import PostJob from "./pages/PostJob";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path="/job/:id" element={<JobDetails />} />
         <Route path="/saved" element={<SavedJobs />} />
         <Route path="/applied" element={<AppliedJobs />} />
+        <Route path="/post-job" element={<PostJob />} />
       </Route>
 
       <Route path="*" element={<NotFound />} />

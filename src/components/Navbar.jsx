@@ -91,9 +91,12 @@ const Navbar = () => {
             {darkMode ? <HiOutlineSun /> : <HiOutlineMoon />}
           </button>
 
-          <button className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition">
+          <NavLink
+            to="/post-job"
+            className="px-5 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium transition"
+          >
             Post Job
-          </button>
+          </NavLink>
 
         </div>
 
@@ -145,9 +148,13 @@ const Navbar = () => {
               Applied Jobs
             </NavLink>
 
-            <button className="bg-blue-600 text-white rounded-lg py-3">
+            <NavLink
+              to="/post-job"
+              onClick={()=>setMobileOpen(false)}
+              className="bg-blue-600 text-white rounded-lg py-3 text-center"
+            >
               Post Job
-            </button>
+            </NavLink>
 
           </nav>
 

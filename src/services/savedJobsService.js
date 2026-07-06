@@ -1,4 +1,4 @@
-import jobs from "../data/jobs";
+import { getJobs } from "./jobService";
 
 const SAVED_JOBS_KEY = "savedJobs";
 
@@ -19,20 +19,19 @@ const getSavedJobIds = () => {
 export const getSavedJobs = () => {
   const savedJobIds = getSavedJobIds();
 
-  return jobs.filter((job) => savedJobIds.includes(job.id));
+  return getJobs().filter((job) => savedJobIds.includes(job.id));
 };
 
 export const isJobSaved = (jobId) => {
-  return getSavedJobIds().includes(Number(jobId));
+  return getSavedJobIds().includes(jobId);
 };
 
 export const toggleSavedJob = (jobId) => {
   const savedJobIds = getSavedJobIds();
-  const numericJobId = Number(jobId);
-  const isSaved = savedJobIds.includes(numericJobId);
+  const isSaved = savedJobIds.includes(jobId);
   const updatedSavedJobIds = isSaved
-    ? savedJobIds.filter((savedJobId) => savedJobId !== numericJobId)
-    : [...savedJobIds, numericJobId];
+    ? savedJobIds.filter((savedJobId) => savedJobId !== jobId)
+    : [...savedJobIds, jobId];
 
   localStorage.setItem(SAVED_JOBS_KEY, JSON.stringify(updatedSavedJobIds));
 
