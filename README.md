@@ -2,6 +2,7 @@
 
 TalentHub is a responsive job board web application built with React, Vite, Tailwind CSS, and React Router. It allows users to browse jobs, search openings, view job details, save jobs, apply for jobs, and post new jobs locally.
 
+
 <img width="1617" height="800" alt="image" src="https://github.com/user-attachments/assets/9ae83f94-e25c-4438-a3cb-3dc1f589bd21" />
 
 ## Live Links
