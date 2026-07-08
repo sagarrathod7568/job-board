@@ -14,7 +14,6 @@ const SearchBar = ({ onSearch }) => {
       onSubmit={handleSubmit}
       className="bg-white rounded-xl shadow-xl p-4 flex flex-col md:flex-row gap-4 max-w-4xl mx-auto dark:bg-slate-900 dark:shadow-slate-950/40"
     >
-
       <input
         type="text"
         value={searchText}
@@ -30,7 +29,6 @@ const SearchBar = ({ onSearch }) => {
         <FiSearch />
         Search
       </button>
-
     </form>
   );
 };

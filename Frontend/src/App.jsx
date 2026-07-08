@@ -6,12 +6,24 @@ import JobDetails from "./pages/JobDetails";
 import SavedJobs from "./pages/SavedJobs";
 import AppliedJobs from "./pages/AppliedJobs";
 import PostJob from "./pages/PostJob";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
     <Routes>
-      <Route element={<MainLayout />}>
+      {/* Public Route */}
+      <Route path="/login" element={<Login />} />
+
+      {/* Protected Routes */}
+      <Route
+        element={
+          <ProtectedRoute>
+            <MainLayout />
+          </ProtectedRoute>
+        }
+      >
         <Route path="/" element={<Home />} />
         <Route path="/jobs" element={<Home />} />
         <Route path="/job/:id" element={<JobDetails />} />

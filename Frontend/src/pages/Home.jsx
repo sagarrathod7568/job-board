@@ -14,7 +14,10 @@ const Home = () => {
     setSearchTerm(query);
 
     requestAnimationFrame(() => {
-      resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+      resultsRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
     });
   };
 
@@ -46,7 +49,10 @@ const Home = () => {
   useEffect(() => {
     if (pathname === "/jobs") {
       requestAnimationFrame(() => {
-        resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        resultsRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       });
     }
   }, [pathname]);
@@ -55,10 +61,12 @@ const Home = () => {
     <>
       <Hero onSearch={handleSearch} />
 
-      <section id="jobs" ref={resultsRef} className="max-w-7xl mx-auto px-6 py-16">
-
+      <section
+        id="jobs"
+        ref={resultsRef}
+        className="max-w-7xl mx-auto px-6 py-16"
+      >
         <div className="flex justify-between items-center mb-10">
-
           <h2 className="text-3xl font-bold text-slate-900 dark:text-white">
             Latest Jobs
           </h2>
@@ -66,19 +74,13 @@ const Home = () => {
           <p className="text-gray-500 dark:text-slate-400">
             {filteredJobs.length} Jobs Available
           </p>
-
         </div>
 
         {filteredJobs.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
             {filteredJobs.map((job) => (
-              <JobCard
-                key={job.id}
-                job={job}
-              />
+              <JobCard key={job.id} job={job} />
             ))}
-
           </div>
         ) : (
           <div className="rounded-xl border border-dashed border-slate-300 bg-white p-10 text-center dark:border-slate-700 dark:bg-slate-800">
@@ -91,7 +93,6 @@ const Home = () => {
             </p>
           </div>
         )}
-
       </section>
     </>
   );

@@ -20,12 +20,16 @@ export const getAppliedJobs = () => {
   const appliedJobIds = getAppliedJobIds();
 
   return getJobs().filter((job) =>
-    appliedJobIds.some((appliedJobId) => String(appliedJobId) === String(job.id))
+    appliedJobIds.some(
+      (appliedJobId) => String(appliedJobId) === String(job.id),
+    ),
   );
 };
 
 export const isJobApplied = (jobId) => {
-  return getAppliedJobIds().some((appliedJobId) => String(appliedJobId) === String(jobId));
+  return getAppliedJobIds().some(
+    (appliedJobId) => String(appliedJobId) === String(jobId),
+  );
 };
 
 export const saveAppliedJob = (jobId) => {
@@ -37,6 +41,6 @@ export const saveAppliedJob = (jobId) => {
 
   localStorage.setItem(
     APPLIED_JOBS_KEY,
-    JSON.stringify([...appliedJobIds, jobId])
+    JSON.stringify([...appliedJobIds, jobId]),
   );
 };

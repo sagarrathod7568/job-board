@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaArrowLeft, FaMapMarkerAlt, FaBriefcase } from "react-icons/fa";
 import { getJobById } from "../services/jobService";
+import toast from "react-hot-toast";
 import { isJobApplied, saveAppliedJob } from "../services/appliedJobsService";
 
 const JobDetails = () => {
@@ -11,6 +12,7 @@ const JobDetails = () => {
   const [applied, setApplied] = useState(() => isJobApplied(id));
 
   const handleApply = () => {
+    toast.success("Job Applied!");
     saveAppliedJob(id);
     setApplied(true);
     navigate("/applied");

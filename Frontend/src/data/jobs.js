@@ -48,8 +48,7 @@ const jobs = [
     salary: "₹8 - ₹12 LPA",
     logo: "https://logo.clearbit.com/infosys.com",
     skills: ["React", "Node.js", "MongoDB"],
-    description:
-      "Develop full-stack applications using the MERN stack.",
+    description: "Develop full-stack applications using the MERN stack.",
   },
   {
     id: 5,
@@ -100,8 +99,7 @@ const jobs = [
     salary: "₹6 - ₹9 LPA",
     logo: "https://logo.clearbit.com/tcs.com",
     skills: ["HTML", "CSS", "JavaScript"],
-    description:
-      "Develop responsive and accessible web applications.",
+    description: "Develop responsive and accessible web applications.",
   },
   {
     id: 9,
@@ -113,8 +111,7 @@ const jobs = [
     salary: "₹8 - ₹14 LPA",
     skills: ["React", "Node.js"],
     logo: "https://logo.clearbit.com/zoho.com",
-    description:
-      "Build business software products used by millions of users.",
+    description: "Build business software products used by millions of users.",
   },
   {
     id: 10,
@@ -126,8 +123,7 @@ const jobs = [
     salary: "₹15 - ₹20 LPA",
     logo: "https://logo.clearbit.com/flipkart.com",
     skills: ["React", "Redux", "Tailwind"],
-    description:
-      "Develop high-performance e-commerce experiences.",
+    description: "Develop high-performance e-commerce experiences.",
   },
 ];
 

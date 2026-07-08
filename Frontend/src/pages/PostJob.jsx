@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { addPostedJob } from "../services/jobService";
+import toast from "react-hot-toast";
 
 const initialForm = {
   title: "",
@@ -41,6 +42,7 @@ const PostJob = () => {
     });
 
     navigate(`/job/${postedJob.id}`);
+    toast.success("Job Posted!");
   };
 
   return (

@@ -31,7 +31,10 @@ export const addPostedJob = (job) => {
     id: `posted-${Date.now()}`,
   };
 
-  localStorage.setItem(POSTED_JOBS_KEY, JSON.stringify([newJob, ...postedJobs]));
+  localStorage.setItem(
+    POSTED_JOBS_KEY,
+    JSON.stringify([newJob, ...postedJobs]),
+  );
 
   return newJob;
 };

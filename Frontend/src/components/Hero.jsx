@@ -4,7 +4,6 @@ const Hero = ({ onSearch }) => {
   return (
     <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
       <div className="max-w-7xl mx-auto px-6 py-20 text-center">
-
         <span className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-6">
           🚀 Discover 1000+ Jobs from Top Companies
         </span>
@@ -24,7 +23,6 @@ const Hero = ({ onSearch }) => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-
           <div className="bg-white/10 rounded-xl p-5 backdrop-blur">
             <h2 className="text-3xl font-bold">1200+</h2>
             <p className="text-blue-100 mt-2">Live Jobs</p>
@@ -44,9 +42,7 @@ const Hero = ({ onSearch }) => {
             <h2 className="text-3xl font-bold">98%</h2>
             <p className="text-blue-100 mt-2">Success Rate</p>
           </div>
-
         </div>
-
       </div>
     </section>
   );
