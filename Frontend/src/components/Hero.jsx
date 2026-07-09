@@ -5,11 +5,11 @@ const Hero = ({ onSearch }) => {
     <section className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white">
       <div className="max-w-7xl mx-auto px-6 py-20 text-center">
         <span className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm mb-6">
-          🚀 Discover 1000+ Jobs from Top Companies
+          Discover 1000+ Jobs from Top Companies 🚀
         </span>
 
         <h1 className="text-5xl font-bold leading-tight">
-          Find Your
+          ✨Find Your
           <span className="text-yellow-300"> Dream Job</span>
         </h1>
 

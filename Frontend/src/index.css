@@ -17,3 +17,12 @@ html.dark body {
   background: #0f172a;
   color: #e2e8f0;
 }
+
+.login_page {
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.5)),
+    url("/login_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
