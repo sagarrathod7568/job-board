@@ -55,10 +55,10 @@ const Login = () => {
               T
             </div>
             <div>
-              <h1 className="font-bold text-xl text-slate-900 dark:text-white">
+              <h1 className="font-bold text-xl text-slate-900">
                 TalentHub
               </h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400">
+              <p className="text-xs text-slate-500">
                 Find Your Dream Career{" "}
               </p>
             </div>
